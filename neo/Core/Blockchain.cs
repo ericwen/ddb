@@ -38,7 +38,7 @@ namespace Neo.Core
         public static readonly RegisterTransaction SystemShare = new RegisterTransaction
         {
             AssetType = AssetType.SystemShare,
-            Name = "[{\"lang\":\"zh-CN\",\"name\":\"小蚁股\"},{\"lang\":\"en\",\"name\":\"AntShare\"}]",
+            Name = "[{\"lang\":\"zh-CN\",\"name\":\"当当币\"},{\"lang\":\"en\",\"name\":\"DDB\"}]",
             Amount = Fixed8.FromDecimal(100000000),
             Precision = 0,
             Owner = ECCurve.Secp256r1.Infinity,
@@ -52,7 +52,7 @@ namespace Neo.Core
         public static readonly RegisterTransaction SystemCoin = new RegisterTransaction
         {
             AssetType = AssetType.SystemCoin,
-            Name = "[{\"lang\":\"zh-CN\",\"name\":\"小蚁币\"},{\"lang\":\"en\",\"name\":\"AntCoin\"}]",
+            Name = "[{\"lang\":\"zh-CN\",\"name\":\"当当券\"},{\"lang\":\"en\",\"name\":\"DDQ\"}]",
             Amount = Fixed8.FromDecimal(GenerationAmount.Sum(p => p) * DecrementInterval),
             Precision = 8,
             Owner = ECCurve.Secp256r1.Infinity,

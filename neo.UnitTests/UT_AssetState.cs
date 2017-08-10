@@ -431,9 +431,9 @@ namespace Neo.UnitTests
             uint expiration;
             bool isFrozen;
             setupAssetStateWithValues(uut, out assetId, out assetType, out name, out amount, out available, out precision, out fee, out feeAddress, out owner, out admin, out issuer, out expiration, out isFrozen);
-            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"小蚁股\"},{\"lang\":\"en\",\"name\":\"Neo\"}]";
+            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"当当币\"},{\"lang\":\"en\",\"name\":\"Neo\"}]";
 
-            uut.GetName(new CultureInfo("zh-CN")).Should().Be("小蚁股");
+            uut.GetName(new CultureInfo("zh-CN")).Should().Be("当当币");
             uut.GetName(new CultureInfo("en")).Should().Be("Neo");
         }
 
@@ -450,7 +450,7 @@ namespace Neo.UnitTests
             uint expiration;
             bool isFrozen;
             setupAssetStateWithValues(uut, out assetId, out assetType, out name, out amount, out available, out precision, out fee, out feeAddress, out owner, out admin, out issuer, out expiration, out isFrozen);
-            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"小蚁股\"},{\"lang\":\"en\",\"name\":\"Neo\"}]";
+            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"当当币\"},{\"lang\":\"en\",\"name\":\"Neo\"}]";
 
             CultureInfo.CurrentCulture = new CultureInfo("en");
             uut.GetName().Should().Be("Neo");
@@ -469,10 +469,10 @@ namespace Neo.UnitTests
             uint expiration;
             bool isFrozen;
             setupAssetStateWithValues(uut, out assetId, out assetType, out name, out amount, out available, out precision, out fee, out feeAddress, out owner, out admin, out issuer, out expiration, out isFrozen);
-            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"小蚁股\"},{\"lang\":\"en\",\"name\":\"Neo\"}]";
+            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"当当币\"},{\"lang\":\"en\",\"name\":\"Neo\"}]";
 
             CultureInfo.CurrentCulture = new CultureInfo("zh-CN");
-            uut.GetName().Should().Be("小蚁股");
+            uut.GetName().Should().Be("当当币");
         }
 
         [TestMethod]
@@ -488,7 +488,7 @@ namespace Neo.UnitTests
             uint expiration;
             bool isFrozen;
             setupAssetStateWithValues(uut, out assetId, out assetType, out name, out amount, out available, out precision, out fee, out feeAddress, out owner, out admin, out issuer, out expiration, out isFrozen);
-            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"小蚁股\"},{\"lang\":\"en\",\"name\":\"Neo\"}]";
+            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"当当币\"},{\"lang\":\"en\",\"name\":\"Neo\"}]";
 
             CultureInfo.CurrentCulture = new CultureInfo("de-DE");
             uut.GetName().Should().Be("Neo"); // defaults to english IF english is in the name
@@ -507,10 +507,10 @@ namespace Neo.UnitTests
             uint expiration;
             bool isFrozen;
             setupAssetStateWithValues(uut, out assetId, out assetType, out name, out amount, out available, out precision, out fee, out feeAddress, out owner, out admin, out issuer, out expiration, out isFrozen);
-            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"小蚁股\"},{\"lang\":\"foo\",\"name\":\"bar\"}]";
+            uut.Name = "[{\"lang\":\"zh-CN\",\"name\":\"当当币\"},{\"lang\":\"foo\",\"name\":\"bar\"}]";
 
             CultureInfo.CurrentCulture = new CultureInfo("de-DE");
-            uut.GetName().Should().Be("小蚁股"); // defaults to first name IF english is not in the name
+            uut.GetName().Should().Be("当当币"); // defaults to first name IF english is not in the name
         }
 
 
